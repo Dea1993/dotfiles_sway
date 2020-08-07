@@ -6,6 +6,9 @@
 
 ### Settings
   include /etc/sway/config.d/*
+  
+  # layout
+  workspace_layout tabbed
 
   # font
   font pango IMB Plex Mono 16px
