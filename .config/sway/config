@@ -42,6 +42,9 @@ set $irc hexchat
 # lockscreen
 set $lock swaylock
 
+# curr window coordinates
+set $currwin $(swaymsg -t get_tree | jq -r '.. | (.nodes? // empty)[] | select(.focused) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -124,10 +127,15 @@ input "1739:32551:MSFT0001:01_06CB:7F27_Touchpad" {
     bindsym $mod+Alt+4 exec $term
     bindsym $mod+Alt+5 exec telegram-desktop
     bindsym $mod+Alt+6 exec $irc
-    # screenshot
+    # screenshot full
     bindsym Print exec grim
+    bindsym Print exec grim - | wl-copy # copy clipboard
     # screenshot selector
     bindsym Shift+Print exec grim -g "$(slurp)"
+    bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" - | wl-copy
+    # screenshot selected window
+    bindsym Alt+Print exec swaymsg -t get_tree | jq -r '.. | (.nodes? // empty)[] | select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)"' | grim -g -
+    bindsym Ctrl+Alt+Print exec swaymsg -t get_tree | jq -r '.. | (.nodes? // empty)[] | select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)"' | grim -g - - | wl-copy
 #
 # Moving around:
 #
