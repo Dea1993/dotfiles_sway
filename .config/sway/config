@@ -115,7 +115,7 @@ input "1739:32551:MSFT0001:01_06CB:7F27_Touchpad" {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
     # application shortcuts
     bindsym $mod+Alt+1 exec $browser
@@ -124,7 +124,10 @@ input "1739:32551:MSFT0001:01_06CB:7F27_Touchpad" {
     bindsym $mod+Alt+4 exec $term
     bindsym $mod+Alt+5 exec telegram-desktop
     bindsym $mod+Alt+6 exec $irc
+    # screenshot
     bindsym Print exec grim
+    # screenshot selector
+    bindsym Shift+Print exec grim -g "$(slurp)"
 #
 # Moving around:
 #
