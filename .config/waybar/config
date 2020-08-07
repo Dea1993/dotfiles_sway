@@ -1,0 +1,70 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["sway/workspaces", "network", "sway/mode"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "backlight", "battery", "temperature", "cpu", "memory"],
+
+  "clock": {
+    "format": "{:%a, %d %b  %H:%M}",
+    "tooltip": false,
+    "on-click": "gsimplecal",
+    "on-click-middle": "gnome-clocks"
+  },
+  "network": {
+    "format-wifi": "🖧  ↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
+    "format-ethernet": "🖧  ↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
+    "format-linked": "🖧 {ifname} (No IP)",
+    "format-disconnected": "⚠ ",
+    "tooltip-format": "{ifname} {ipaddr} ({signalStrength}%)",
+    "interval": 2,
+    "on-click-middle": "nm-connection-editor"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "🔈 --",
+    "format-icons": ["🔉", "🔊"],
+    "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "format-icons": {
+      "headphones": ["🔉", "🔊"],
+      "headset": "🎧",
+      "default": ["🔉", "🔊"]
+    },
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["⚋", "⚊", "⚍", "⚌", "☰"],
+    "interval": 60,
+    "states": {
+      "warning": 25,
+      "critical": 10
+    },
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["🔅", "🔆"],
+    "on-scroll-down": "brightnessctl set 5%-",
+    "on-scroll-up": "brightnessctl set 5%+",
+  },
+  "temperature": {
+    "hwmon-path" : "/sys/class/hwmon/hwmon2/temp1_input",
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["🔥"]
+  },
+  "cpu": {
+    "format": "CPU: {usage}%",
+    "interval": 2,
+    "states": {
+      "med": 30,
+      "high": 50,
+      "very_high": 80
+    },
+  },
+  "memory": {
+    "format": "RAM: {percentage}%",
+    "states": {
+      "high": 65,
+      "very_high": 80
+    },
+  }
+}

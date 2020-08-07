@@ -1,0 +1,108 @@
+* {
+  border: none;
+  border-radius: 5;
+  font-family: "IBM Plex Mono Text", monospace;
+  font-size: 16px;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 1);
+  /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
+  color: #00ff00;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+#workspaces,
+#mode,
+#network {
+  padding: 0 5px;
+  margin-right: 20px;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: #00ff00;
+}
+#workspaces button:hover {
+  color: #000000;
+  background: #00aa00;
+}
+#workspaces button.focused {
+  color: #000000;
+  background-color: #00ff00;
+}
+#workspaces button.urgent {
+  color: #000000;
+  background-color: #ff0000;
+}
+
+#mode {
+  padding: 0 10px;
+  color: #ff0000;
+}
+
+#network {
+  margin-left:20px;
+}
+
+#clock,
+#pulseaudio,
+#backlight,
+#battery,
+#temperature,
+#cpu,
+#memory {
+  padding: 0 8px;
+  margin-right: 5px;
+}
+
+#clock {
+  border-bottom: 1px solid #00ff00;
+}
+
+/*#pulseaudio {*/
+/*border-bottom: 2px solid white;*/
+/*}*/
+
+/*#backlight {*/
+/*border-bottom: 2px solid yellow;*/
+/*}*/
+
+/*#battery {*/
+/*border-bottom: 2px solid orange;*/
+/*}*/
+#battery.warning {
+  color: orange;
+}
+#battery.critical {
+  color: red;
+}
+
+/*#temperature {*/
+/*border-bottom: 2px solid red;*/
+/*}*/
+
+/*#cpu {*/
+/*border-bottom: 2px solid #A7D8DE;*/
+/*}*/
+#cpu.med {
+  color: #A7D8DE;
+}
+#cpu.high {
+  color: yellow;
+}
+#cpu.very_high {
+  color: magenta;
+}
+
+/*#memory {*/
+/*border-bottom: 2px solid cyan;*/
+/*}*/
+#memory.high {
+  color: cyan;
+}
+#memory.very_high {
+  color: blue;
+}
