@@ -8,7 +8,7 @@
   include /etc/sway/config.d/*
   
   # layout
-  workspace_layout tabbed
+  workspace_layout default
 
   # font
   font pango IMB Plex Mono 16px
