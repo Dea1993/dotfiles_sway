@@ -53,7 +53,7 @@
   set $filer nautilus
 
   # browser
-  set $browser firefox
+  set $browser MOZ_ENABLE_WAYLAND=1 firefox
 
   # email client
   set $email thunderbird
