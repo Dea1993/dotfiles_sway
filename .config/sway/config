@@ -145,7 +145,7 @@
   bindsym $mod+Alt+2 exec $email
   bindsym $mod+Alt+3 exec $filer
   bindsym $mod+Alt+4 exec $term
-  bindsym $mod+Alt+5 exec telegram-desktop
+  bindsym $mod+Alt+5 exec QT_QPA_PLATFORM=wayland-egl telegram-desktop
   bindsym $mod+Alt+6 exec $irc
   # screenshot full
   bindsym Print exec grim
@@ -313,7 +313,7 @@ get_tree | jq -r '.. | (.nodes? // empty)[] | select(.focused) | "\(.rect.x),\(.
 
 
 ### window rules
-  assign [class="firefox"] workspace 1
+  assign [app_id="firefox"] workspace 1
   assign [class="Thunderbird"] workspace 2
   assign [app_id="org.gnome.Nautilus"] workspace 3
   assign [class="TelegramDesktop"] workspace 5
