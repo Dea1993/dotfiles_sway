@@ -317,6 +317,7 @@ get_tree | jq -r '.. | (.nodes? // empty)[] | select(.focused) | "\(.rect.x),\(.
   assign [class="Thunderbird"] workspace 2
   assign [app_id="org.gnome.Nautilus"] workspace 3
   assign [class="TelegramDesktop"] workspace 5
+  assign [app_id="telegramdesktop"] workspace 5
   assign [class="Hexchat"] workspace 6
 
   for_window [window_role="pop-up"] floating enable
