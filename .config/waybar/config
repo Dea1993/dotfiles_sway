@@ -8,7 +8,7 @@
   "clock": {
     "format": "{:%a, %d %b  %H:%M}",
     "tooltip": false,
-    "on-click": "gsimplecal",
+    "on-click": "LANG=it_IT.utf8 gsimplecal",
     "on-click-middle": "gnome-clocks"
   },
   "network": {

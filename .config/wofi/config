@@ -1,0 +1,9 @@
+show=drun
+allow_images=true
+allow_markup=true
+term=alacritty
+insensitive=true
+location=top
+image_size=24px
+width=69%
+lines=9

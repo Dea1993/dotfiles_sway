@@ -1,0 +1,28 @@
+#window {
+  background-color: #111;
+  color: #0f0;
+}
+#input {
+  color: #0f0;
+  margin-bottom: 12px;
+  border-radius: 36px;
+  font-size: 18px;
+}
+::placeholder {
+  color: #0d0;
+}
+#outer-box {
+  padding: 12px;
+}
+#entry {
+  padding-left: 16px;
+  font-size: 18px;
+}
+#entry:selected {
+  background-color: #0f0;
+  border-radius: 24px;
+}
+#text:selected {
+  color: #000;
+}
+
