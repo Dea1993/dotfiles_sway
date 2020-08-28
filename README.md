@@ -8,5 +8,5 @@ Here you can find configurations for:
 - wofi (wayland application launcher)
 
 # Screenshots
-![20200828_12h12m02s_grim](20200828_12h12m02s_grim.png)
-![20200828_12h12m02s_grim](20200828_12h13m02s_grim.png)
+![20200828_12h12m02s_grim](.dotfiles_sway/20200828_12h12m02s_grim.png)
+![20200828_12h12m02s_grim](.dotfiles_sway/20200828_12h13m02s_grim.png)
