@@ -85,7 +85,7 @@
   # resumed. It will also lock your screen before your computer goes to sleep.
   exec swayidle \
           timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          timeout 420 'swaylock' \
+          timeout 600 'swaylock' \
           before-sleep 'swaylock'
 
   # notification system

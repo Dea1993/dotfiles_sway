@@ -15,8 +15,8 @@
     "format-wifi": "🖧  ↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
     "format-ethernet": "🖧  ↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
     "format-linked": "🖧 {ifname} (No IP)",
-    "format-disconnected": "⚠ ",
-    "tooltip-format": "{ifname} {ipaddr} ({signalStrength}%)",
+    "format-disconnected": "⚠  no connection",
+    "tooltip-format": "{ifname} - {essid} | {ipaddr} ({signalStrength}%)",
     "interval": 2,
     "on-click-middle": "nm-connection-editor"
   },
