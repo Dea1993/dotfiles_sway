@@ -25,6 +25,7 @@
     "format-muted": "🔈 --",
     "format-icons": ["🔉", "🔊"],
     "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-update": "notify-send -c volchanged -t 500 volume changed",
     "format-icons": {
       "headphones": ["🔉", "🔊"],
       "headset": "🎧",
@@ -45,6 +46,7 @@
     "format-icons": ["🔅", "🔆"],
     "on-scroll-down": "brightnessctl set 5%-",
     "on-scroll-up": "brightnessctl set 5%+",
+    "on-update": "notify-send -c backlightchanged -t 500 backlight changed",
   },
   "temperature": {
     "hwmon-path" : "/sys/class/hwmon/hwmon2/temp1_input",
