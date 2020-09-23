@@ -144,7 +144,7 @@
   bindsym $mod+Alt+1 exec $browser
   bindsym $mod+Alt+2 exec $email
   bindsym $mod+Alt+3 exec $filer
-  bindsym $mod+Alt+4 exec $term
+  #bindsym $mod+Alt+4 exec $term
   #bindsym $mod+Alt+5 exec QT_QPA_PLATFORM=wayland-egl telegram-desktop
   bindsym $mod+Alt+5 exec telegram-desktop
   bindsym $mod+Alt+6 exec $irc
@@ -159,6 +159,9 @@
 get_tree | jq -r '.. | (.nodes? // empty)[] | select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)"' | grim -g -
   bindsym Ctrl+Alt+Print exec swaymsg -t \
 get_tree | jq -r '.. | (.nodes? // empty)[] | select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)"' | grim -g - - | wl-copy
+
+  # dismiss all notifications
+  bindsym $mod+z exec makoctl dismiss --all
 
   # Moving around:
 
