@@ -330,6 +330,8 @@ get_tree | jq -r '.. | (.nodes? // empty)[] | select(.focused) | "\(.rect.x),\(.
   for_window [window_role="dialog"] floating enable
   for_window [window_role="About"] floating enable
   for_window [window_type="dialog"] floating enable
+  #for_window [title="About*"] floating enable
+  #for_window [title="PayPal*"] floating enable
   for_window [app_id="lximage-qt"] floating enable
   for_window [app_id="nm-connection-editor$"] floating enable
   for_window [app_id="gnome-(calendar|calculator|control-center)"] floating enable
