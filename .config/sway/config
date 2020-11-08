@@ -74,7 +74,17 @@
   output * background #111111 solid_color
 
   # display scaling
-  output eDP-1 scale 1
+  #output 'Dell Inc. DELL P2415Q D8VXF8BT0ANB' scale 1 res 1920x1080 pos 0 0
+  output HDMI-A-1 scale 1 res 1920x1080 pos 0 0
+  output eDP-1 scale 1 pos 0 1080
+  
+  # workspace displays
+  workspace 1 output eDP-1
+  workspace 2 output HDMI-A-1
+  workspace 4 output HDMI-A-1
+  workspace 5 output eDP-1
+  workspace 6 output HDMI-A-1
+
 
 
 ### Idle configuration
