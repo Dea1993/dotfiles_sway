@@ -23,10 +23,10 @@
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "format-muted": "🔈 --",
-    "format-icons": ["🔉", "🔊"],
     "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "scroll-step": 5,
     "format-icons": {
-      "headphones": ["🔉", "🔊"],
+      "headphone": "🎧",
       "headset": "🎧",
       "default": ["🔉", "🔊"]
     },
