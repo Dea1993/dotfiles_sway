@@ -1,9 +1,14 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["sway/workspaces", "network", "sway/mode"],
+  "modules-left": ["sway/workspaces", "sway/mode", "network", "sway/window"],
   "modules-center": ["clock"],
   "modules-right": ["pulseaudio", "backlight", "battery", "temperature", "cpu", "memory"],
+
+  "sway/window": {
+    "format" : "~> {}",
+    "max-length": 30
+  },
 
   "clock": {
     "format": "{:%a, %d %b  %H:%M}",
@@ -12,10 +17,11 @@
     "on-click-middle": "gnome-clocks"
   },
   "network": {
-    "format-wifi": "🖧  ↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
-    "format-ethernet": "🖧  ↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
+    "format-wifi": "🖧  ↓ {bandwidthDownOctets} ↑ {bandwidthUpOctets}",
+    "format-ethernet": "🖧  ↓ {bandwidthDownOctets} ↑ {bandwidthUpOctets}",
     "format-linked": "🖧 {ifname} (No IP)",
     "format-disconnected": "⚠  no connection",
+    "format-disabled": "ꪎ",
     "tooltip-format": "{ifname} - {essid} | {ipaddr} ({signalStrength}%)",
     "interval": 2,
     "on-click-middle": "nm-connection-editor"
