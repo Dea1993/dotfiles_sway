@@ -53,7 +53,7 @@
     "on-scroll-up": "brightnessctl set 5%+",
   },
   "temperature": {
-    "hwmon-path" : "/sys/class/hwmon/hwmon2/temp1_input",
+    "hwmon-path" : "/sys/class/hwmon/hwmon5/temp1_input",
     "format": "{icon} {temperatureC}°C",
     "format-icons": ["🔥"]
   },
