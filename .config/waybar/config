@@ -1,13 +1,17 @@
 {
   "layer": "top",
   "position": "top",
-  "modules-left": ["sway/workspaces", "sway/mode", "network", "sway/window"],
+  "modules-left": ["sway/workspaces", "sway/mode", "network"],
   "modules-center": ["clock"],
   "modules-right": ["pulseaudio", "backlight", "battery", "temperature", "cpu", "memory"],
 
   "sway/window": {
     "format" : "~> {}",
     "max-length": 30
+  },
+  
+  "sway/workspaces": {
+    "disable-scroll": true
   },
 
   "clock": {
@@ -30,6 +34,7 @@
     "format": "{icon} {volume}%",
     "format-muted": "🔈 --",
     "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol",
     "scroll-step": 5,
     "format-icons": {
       "headphone": "🎧",
@@ -53,9 +58,8 @@
     "on-scroll-up": "brightnessctl set 5%+",
   },
   "temperature": {
-    "hwmon-path" : "/sys/class/hwmon/hwmon5/temp1_input",
-    "format": "{icon} {temperatureC}°C",
-    "format-icons": ["🔥"]
+    "hwmon-path" : "/sys/class/hwmon/hwmon4/temp1_input",
+    "format": "T: {temperatureC}°C",
   },
   "cpu": {
     "format": "CPU: {usage}%",

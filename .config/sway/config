@@ -11,7 +11,7 @@
   workspace_layout default
 
   # font
-  font pango IMB Plex Mono 16px
+  font pango IMB Plex Mono 14px
   
   #border settings
   default_border pixel 4
@@ -53,9 +53,11 @@
   set $filer nautilus
 
   # browser
+  #set $browser MOZ_ENABLE_WAYLAND=1 firefox
   set $browser firefox
 
   # email client
+  #set $email MOZ_ENABLE_WAYLAND=1 thunderbird
   set $email thunderbird
 
   # irc client
@@ -77,10 +79,13 @@
   #output 'Dell Inc. DELL P2415Q D8VXF8BT0ANB' scale 1 res 1920x1080 pos 0 0
   output HDMI-A-1 scale 1 res 1920x1080 pos 0 0
   output eDP-1 scale 1 pos 0 1080
+  #output eDP-1 res 1920x1080 mirror HDMI-A-1
   
   # workspace displays
-  workspace 1 output eDP-1
-  workspace 2 output HDMI-A-1
+  #workspace 1 output eDP-1
+  workspace 1 output HDMI-A-1
+  #workspace 2 output HDMI-A-1
+  workspace 2 output eDP-1
   workspace 4 output HDMI-A-1
   workspace 5 output eDP-1
   workspace 6 output HDMI-A-1
@@ -95,7 +100,7 @@
   # resumed. It will also lock your screen before your computer goes to sleep.
   exec swayidle \
           timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          timeout 600 'swaylock' \
+          timeout 900 'swaylock' \
           before-sleep 'swaylock'
 
   # notification system
@@ -129,7 +134,7 @@
   bindsym $mod+Shift+q kill
 
   # Start your launcher
-  bindsym $mod+d exec $menu --show run
+  bindsym $mod+d exec $menu
 
   # lock screen
   bindsym $mod+l exec $lock
@@ -154,7 +159,7 @@
   bindsym $mod+Alt+1 exec $browser
   bindsym $mod+Alt+2 exec $email
   bindsym $mod+Alt+3 exec $filer
-  #bindsym $mod+Alt+4 exec $term
+  bindsym $mod+Alt+4 exec $term
   #bindsym $mod+Alt+5 exec QT_QPA_PLATFORM=wayland-egl telegram-desktop
   bindsym $mod+Alt+5 exec telegram-desktop
   bindsym $mod+Alt+6 exec $irc
@@ -328,6 +333,7 @@ get_tree | jq -r '.. | (.nodes? // empty)[] | select(.focused) | "\(.rect.x),\(.
 
 ### window rules
   assign [app_id="firefox"] workspace 1
+  assign [class="firefox"] workspace 1
   assign [class="Thunderbird"] workspace 2
   assign [app_id="thunderbird"] workspace 2
   assign [app_id="org.gnome.Nautilus"] workspace 3
