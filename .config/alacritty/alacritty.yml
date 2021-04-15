@@ -164,7 +164,6 @@ colors:
   # Default colors
   primary:
     background: '#101010'
-    #foreground: '#009900'
     foreground: '#BABABA'
 
   # Normal colors
@@ -173,7 +172,7 @@ colors:
     red:     '#CC0000'
     green:   '#00CC00'
     yellow:  '#CDCD00'
-    blue:    '#0000CD'
+    blue:    '#0055CD'
     magenta: '#CD00CD'
     cyan:    '#00CDCD'
     white:   '#FAEBD7'
@@ -182,9 +181,9 @@ colors:
   bright:
     black:   '#404040'
     red:     '#FF0000'
-    green:   '#00FF00'
+    green:   '#00DD00'
     yellow:  '#FFFF00'
-    blue:    '#0000FF'
+    blue:    '#0066FF'
     magenta: '#FF00FF'
     cyan:    '#00FFFF'
     white:   '#FFFFFF'
@@ -243,7 +242,7 @@ background_opacity: 1
   #save_to_clipboard: false
 
 # Allow terminal applications to change Alacritty's window title.
-#dynamic_title: true
+dynamic_title: true
 
 #cursor:
   # Cursor style
