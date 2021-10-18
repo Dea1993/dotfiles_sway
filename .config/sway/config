@@ -77,10 +77,10 @@
 
   # display scaling
   #output 'Dell Inc. DELL P2415Q D8VXF8BT0ANB' scale 1 res 1920x1080 pos 0 0
+
   output HDMI-A-1 scale 1 res 1920x1080 pos 0 0
   output eDP-1 scale 1 pos 0 1080
-  #output eDP-1 res 1920x1080 mirror HDMI-A-1
-  
+
   # workspace displays
   #workspace 1 output eDP-1
   workspace 1 output HDMI-A-1
@@ -161,6 +161,7 @@
   bindsym $mod+Alt+3 exec $filer
   bindsym $mod+Alt+4 exec $term
   #bindsym $mod+Alt+5 exec QT_QPA_PLATFORM=wayland-egl telegram-desktop
+  #bindsym $mod+Alt+5 exec QT_QPA_PLATFORM=xcb telegram-desktop
   bindsym $mod+Alt+5 exec telegram-desktop
   bindsym $mod+Alt+6 exec $irc
   # screenshot full
@@ -174,6 +175,7 @@
 get_tree | jq -r '.. | (.nodes? // empty)[] | select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)"' | grim -g -
   bindsym Ctrl+Alt+Print exec swaymsg -t \
 get_tree | jq -r '.. | (.nodes? // empty)[] | select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)"' | grim -g - - | wl-copy
+  bindsym $mod+Print exec flameshot gui
 
   # dismiss all notifications
   bindsym $mod+z exec makoctl dismiss --all
@@ -303,9 +305,7 @@ get_tree | jq -r '.. | (.nodes? // empty)[] | select(.focused) | "\(.rect.x),\(.
   }
   bindsym $mod+r mode "resize"
 
-
 ### Status Bar:
-
   bar {
     swaybar_command waybar
   }
