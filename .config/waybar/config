@@ -14,21 +14,21 @@
     "disable-scroll": true
   },
 
+  "network": {
+    "format-wifi": "{ipaddr}",
+    "format-linked": "🖧  ↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
+    "format-disconnected": "⚠  no connection",
+    "format-disabled": "ꪎ",
+    "tooltip-format": "{ifname} - {essid} ({frequency}GHz) | {ipaddr} ({signalStrength}%)",
+    "interval": 1,
+    "on-click-middle": "nm-connection-editor"
+  },
+
   "clock": {
     "format": "{:%a, %d %b  %H:%M}",
     "tooltip": false,
     "on-click": "LANG=it_IT.utf8 gsimplecal",
     "on-click-middle": "gnome-clocks"
-  },
-  "network": {
-    "format-wifi": "🖧  ↓ {bandwidthDownOctets} ↑ {bandwidthUpOctets}",
-    "format-ethernet": "🖧  ↓ {bandwidthDownOctets} ↑ {bandwidthUpOctets}",
-    "format-linked": "🖧 {ifname} (No IP)",
-    "format-disconnected": "⚠  no connection",
-    "format-disabled": "ꪎ",
-    "tooltip-format": "{ifname} - {essid} | {ipaddr} ({signalStrength}%)",
-    "interval": 2,
-    "on-click-middle": "nm-connection-editor"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -76,5 +76,9 @@
       "high": 65,
       "very_high": 80
     },
+  },
+  "tray": {
+    "icon-size": 24,
+    "spacing": 10
   }
 }
