@@ -1,6 +1,8 @@
 color=#000000
+line-wrong-color=#ff0000
 indicator-caps-lock
 show-failed-attempts
 ignore-empty-password
-indicator-idle-visible
+indicator-radius=70
+indicator-thickness=20
 daemonize

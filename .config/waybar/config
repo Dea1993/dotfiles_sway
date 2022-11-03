@@ -15,9 +15,9 @@
   },
 
   "network": {
-    "format-wifi": "{ipaddr}",
+    "format-wifi": "{ipaddr} ↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
     "format-linked": "🖧  ↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
-    "format-disconnected": "⚠  no connection",
+    "format-disconnected": "⚠ no connection",
     "format-disabled": "ꪎ",
     "tooltip-format": "{ifname} - {essid} ({frequency}GHz) | {ipaddr} ({signalStrength}%)",
     "interval": 1,

@@ -5,26 +5,27 @@
 # Read `man 5 sway` for a complete reference.
 
 ### Settings
-  include /etc/sway/config.d/*
-  
+  #include /etc/sway/config.d/*
+
   # layout
   workspace_layout default
 
   # font
   font pango IMB Plex Mono 14px
-  
+
   #border settings
   default_border pixel 4
+  #default_border none
   #default_floating_border pixel 2
-  hide_edge_borders none
+  hide_edge_borders smart
   smart_borders on
   smart_gaps on
-  gaps inner 4
+  gaps inner 0
 
   # event        | border | background | text
   client.focused  #000000   #007700     #ffffff
   client.urgent   #000000   #ff0000     #000000
-  
+
   # focus settings
   focus_follows_mouse no
   #focus_on_window_activation smart
@@ -75,7 +76,8 @@
 ### Output configuration
 
   # background color
-  output * background #111111 solid_color
+  #output * background #111111 solid_color
+  output * bg /home/andrea/Pictures/scr/world.jpg fill
 
   # display scaling
   #output 'Dell Inc. DELL P2415Q D8VXF8BT0ANB' scale 1 res 1920x1080 pos 0 0
@@ -113,7 +115,8 @@
           before-sleep 'swaylock'
 
   # notification system
-  #exec mako
+  exec mako
+  #exec /usr/bin/dunst
 
   # night mode
   exec gammastep
@@ -365,6 +368,7 @@ get_tree | jq -r '.. | (.nodes? // empty)[] | select(.focused) | "\(.rect.x),\(.
   #for_window [title="PayPal*"] floating enable
   for_window [app_id="lximage-qt"] floating enable
   for_window [app_id="nm-connection-editor$"] floating enable
+  for_window [app_id="org.gnome.Calculator"] floating enable
   for_window [app_id="gnome-(calendar|calculator|control-center)"] floating enable
   #for_window [class="TelegramDesktop"] floating enable
   for_window [app_id="org.gnome.clocks"] floating enable
